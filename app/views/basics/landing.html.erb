@@ -1,13 +1,14 @@
-<h1>BIENVENUE !</h1>
-<p>Voici tous les potins disponibles sur notre site :</p>
+<div class='container'>
+	<h1>BIENVENUE !</h1>
+	<p>Voici tous les potins disponibles sur notre site :</p>
 
-<table>
-	<% @potins.each_with_index do |potin| %>
-       	<tr> 
-      		<td><a href = 'potins/<%= potin.id %>' >Anecdote n°<%= potin.id %></a></td>
-      		<td><%= potin.author %></td>
-      		<td><%= potin.content %></td>
-		</tr>
+	<% @potins.each_with_index do |potin, i| %>
+		<row class='container'>
+			<%= link_to 'Anecdote n°' , gossip_path(potin), class:'col-3' %>
+      		<span class='col-3'> <%= potin.author %> </span>
+      		<span class='col-6'> <%= potin.content %> </span>
+		</row>
 	<% end %>
-</table> 
+
+</div>
 

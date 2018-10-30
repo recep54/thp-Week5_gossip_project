@@ -1,0 +1,30 @@
+<div class='container'>
+
+	<h1>Edition du potin n°<%= @potin.id %></h1>
+
+
+	<div class="form-horizontal">
+	<%= form_tag url_for(action: 'update'), method: "patch" do %>
+	
+	<div class='row center-block col-'>
+		<label class= 'col-sm-2  control-label'><%= label_tag 'Alors, quel est ce blase ?' %></label>
+		<%= text_field_tag 'new_author', @potin.author, class: 'col-sm-6'%>
+	</div>
+	<div class='row center-block'>
+		<label class= 'col-sm-2 control-label'><%= label_tag 'Alors, quel est ce potin ?' %></label>
+		<%= text_area_tag 'new_content', @potin.content, class: 'col-sm-6' %>
+	</div>
+
+	<%= hidden_field 'potin_id', @potin.id %>
+
+	<div class='form-group center-block'>
+	<%= submit_tag "Mettre le potin à jour", class: 'col-sm-offset-2 btn btn-info btn-lg btn-submit' %>
+	</div>
+
+
+	<% end %>
+
+	<a href='/'>
+	  <button>Retour à la page d'accueil</button>
+	</a>
+</div>

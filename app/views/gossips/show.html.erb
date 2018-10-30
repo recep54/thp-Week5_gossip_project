@@ -1,0 +1,10 @@
+<div class='container'>
+
+	<h1>PAGE POTIN</h1>
+
+	<p>Voici la page du potin n°<%= @potin.id %></p>
+	<p>Son auteur : <%= @potin.author %> </p>
+	<p>Le contenu du potin : <%= @potin.content %> </p>
+
+	<%= link_to 'Editer le potin', edit_gossip_path(@potin), class: "btn" %>
+</div>
