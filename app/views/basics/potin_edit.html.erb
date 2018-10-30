@@ -1,0 +1,13 @@
+<h1>PAGE Edition du potin n°<%= @potin.id %></h1>
+
+<form action='/gossips/new/' method='POST'>
+	Alors, quel est ce blase ? <input type='text' name='potin_author' value='<%= @potin.author %>'/>
+	<br/>
+	Alors, quel est ce potin : <input type='text' name='potin_content'/ value='<%= @potin.author %>'>
+	<br/>
+	<input type='submit'/>
+</form>
+
+<a href='/'>
+  <button>Retour à la page d'accueil</button>
+</a>

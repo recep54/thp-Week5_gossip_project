@@ -1,0 +1,13 @@
+<h1>BIENVENUE !</h1>
+<p>Voici tous les potins disponibles sur notre site :</p>
+
+<table>
+	<% @potins.each_with_index do |potin| %>
+       	<tr> 
+      		<td><a href = 'potins/<%= potin.id %>' >Anecdote n°<%= potin.id %></a></td>
+      		<td><%= potin.author %></td>
+      		<td><%= potin.content %></td>
+		</tr>
+	<% end %>
+</table> 
+
