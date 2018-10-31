@@ -3,11 +3,11 @@
 	<p>Voici tous les potins disponibles sur notre site :</p>
 
 	<% @potins.each_with_index do |potin, i| %>
-		<row class='container'>
-			<%= link_to 'Anecdote n°' , gossip_path(potin), class:'col-3' %>
+		<div class='container'>
+			<%= link_to 'Anecdote n°'+(i+1).to_s, gossip_path(potin), class:'col-3' %>
       		<span class='col-3'> <%= potin.author %> </span>
       		<span class='col-6'> <%= potin.content %> </span>
-		</row>
+		</div>
 	<% end %>
 
 </div>
